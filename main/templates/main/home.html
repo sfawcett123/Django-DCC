@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6 pb-4">
+    <h1 class="display-4 font-weight-bold">Connect your System</h1>
+    <h5>Control your system with your voice or mobile application.</h5>
+    {% if user.is_authenticated %}
+        <a class="btn btn-primary mt-2" href="#">Configure</a>
+    {% else %}
+        <a class="btn btn-primary mt-2" href="/accounts/signup">CONNECT</a>
+    {% endif%}
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+        <img class="img-fluid rounded" src="{% static 'img/08-loco.jpg' %}" alt="Loco">
+    </div>
+</div>
+{% endblock content %}
