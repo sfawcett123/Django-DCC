@@ -1,0 +1,1 @@
+web: gunicorn iotdcc.wsgi --log-file -

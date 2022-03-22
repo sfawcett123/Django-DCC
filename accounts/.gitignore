@@ -1,0 +1,11 @@
+--2022-03-22 20:57:37--  https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8003::154, 2606:50c0:8001::154, 2606:50c0:8002::154, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8003::154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2762 (2.7K) [text/plain]
+Saving to: ‘Python.gitignore’
+
+     0K ..                                                    100% 7.68M=0s
+
+2022-03-22 20:57:37 (7.68 MB/s) - ‘Python.gitignore’ saved [2762/2762]
+
