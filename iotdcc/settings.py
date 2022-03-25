@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django_extensions',
 
     "django.contrib.sites",  # new
+    "oauth2_provider",
+    "corsheaders",
     # 3rd party
     "allauth", # new
     "allauth.account", # new
@@ -53,6 +55,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -155,3 +158,6 @@ ACCOUNT_LOGOUT_ON_GET = False
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+REFRESH_TOKEN_GRACE_PERIOD_SECONDS = 500

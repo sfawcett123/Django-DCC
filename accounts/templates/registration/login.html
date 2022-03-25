@@ -9,6 +9,8 @@
 {% endblock %}
 
 {% block body %}
+  <input type="hidden" name="next" value="{{ next }}" />
+
   <div class="container">
     <h1 class="text-center logo my-4">
       <a href="{% url 'home' %}">{% project_name %}</a>
