@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load project_globals %}
+{% load socialaccount %}
 
 {% block stylesheet %}
   <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
@@ -23,9 +24,12 @@
               <button type="submit" class="btn btn-primary btn-block">Log in</button>
             </form>
           </div>
-          <div class="card-footer text-muted text-center">
-            New to {% project_name %}? <a href="{% url 'signup' %}">Sign up</a>
-          </div>
+
+          <a href="{% provider_login_url 'amazon' %}" class="btn btn-secondary">
+            <i class="fa fa-github fa-fw"></i>
+            <span>Login with Amazon</span>
+          </a>
+
         </div>
         <div class="text-center py-2">
           <small>

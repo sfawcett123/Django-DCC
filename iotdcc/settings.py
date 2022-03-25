@@ -27,6 +27,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+
+    "django.contrib.sites",  # new
+    # 3rd party
+    "allauth", # new
+    "allauth.account", # new
+    "allauth.socialaccount", # new
+    # social providers
+    "allauth.socialaccount.providers.amazon", # new
+
     'fontawesomefree',
     'widget_tweaks',
     'main',
@@ -121,5 +130,14 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTHENTICATION_BACKENDS = (
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+SITE_ID = 3
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_LOGOUT_ON_GET = False
+
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
